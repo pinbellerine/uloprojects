@@ -1,0 +1,148 @@
+.container-syauqiy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.left-section {
+  flex: 1;
+  text-align: center;
+  margin-left: 80px;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.left-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.left-section p {
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.left-section input {
+  width: 60%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+.left-section button {
+  width: 60%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a56e2;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.left-section a {
+  display: block;
+  margin-top: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.right-section img {
+  max-width: 100%;
+}
+
+.reset-title {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.reset-subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.reset-text {
+  font-size: 20px;
+  color: #aaa;
+}
+
+.check-title, .newpassword-title, .success-title {
+  font-size: 2.5rem;
+}
+
+.check-subtitle, .newpassword-subtitle, .success-subtitle {
+  font-size: 1.5rem;
+}
+
+.check-text, .resend-text, .password-hint, .success-text {
+  font-size: 20px;
+}
+
+.otp-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.otp-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.otp-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 80px;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #4a56e2;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+.otp-modal button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a56e2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,228 @@
+.overlayFawwaz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialogFawwaz {
+  background: #1a1a1a;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.headerFawwaz {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headerFawwaz h2 {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+
+.closeButtonFawwaz {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.contentFawwaz {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reasonButtonFawwaz {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reasonButtonFawwaz:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reasonButtonFawwaz.selectedFawwaz {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.reasonTitleFawwaz {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.reasonDescriptionFawwaz {
+  color: #888;
+  font-size: 14px;
+}
+.messageFawwaz {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.helpButtonFawwaz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 20px;
+}
+
+.helpButtonFawwaz:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.textareaContainerFawwaz {
+  margin-bottom: 20px;
+}
+
+.textareaFawwaz {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.textareaFawwaz::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.submitButtonFawwaz {
+  width: 100px;
+  padding: 8px 16px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+}
+
+.submitButtonFawwaz:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Add these new styles to your existing CSS */
+
+.checkboxLabelFawwaz {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.checkboxLabelFawwaz input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  outline: none;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkboxLabelFawwaz input[type="checkbox"]:checked {
+  background-color: #007AFF;
+  border-color: #007AFF;
+  position: relative;
+}
+
+.checkboxLabelFawwaz input[type="checkbox"]:checked::before {
+  content: '\2713';
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkboxLabelFawwaz input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.5);
+}
+
+/* Modify the existing textarea styles */
+.textareaFawwaz {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  resize: vertical;
+  margin-top: 8px;
+}
+
+.textareaFawwaz::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Adjust the submit button styles */
+.submitButtonFawwaz {
+  width: auto;
+  padding: 10px 20px;
+  background: #272727;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+.submitButtonFawwaz:hover {
+  background: #4a4a4a;
+}

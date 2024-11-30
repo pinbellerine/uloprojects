@@ -1,0 +1,619 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-scroll {
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  z-index: 1000;
+  display: flex;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.popup-content {
+  width: 1130px;
+  height: 2425px;
+  border-radius: 10px;
+  background-color: #262428;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  transition: height 0.3s ease-in-out;
+}
+
+.thumbnail,
+.vid {
+  width: 1130px;
+  height: 534.18px;
+  display: block;
+  object-fit: cover;
+}
+
+.thumbnail {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.thumbnail.fade-out {
+  opacity: 0;
+}
+
+.video-player {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.vid.fade-in {
+  opacity: 1;
+}
+
+.closeIcon {
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+  margin-left: 1074px;
+  margin-top: 14px;
+  position: absolute;
+  z-index: 100;
+}
+
+.gradasi {
+  width: 1130px;
+  height: 260px;
+  background: linear-gradient(rgba(38, 36, 40, 0.0), rgba(38, 36, 40, 1.0));
+  z-index: 100;
+  position: absolute;
+  margin-top: -260px;
+}
+
+.content1 {
+  display: flex;
+  margin-top: -170px;
+  z-index: 100;
+  position: absolute;
+}
+
+.kiri {
+  margin-left: 35px;
+}
+
+.kategori {
+  gap: 11px;
+  display: flex;
+  align-items: center;
+}
+
+.kategoriDeskripsi {
+  font-size: 13px;
+  font-weight: 550;
+  color: white;
+}
+
+.batas {
+  width: 2px;
+  height: 12px;
+  background-color: #E7E7EB;
+}
+
+.judulTrailer {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.aksi {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.aksi1 {
+  display: flex;
+  width: 180px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #3F55C6;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.aksi1:hover {
+  display: flex;
+  width: 180px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #394DB3;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.textPutar {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  margin-top: -1px;
+}
+
+.playButton {
+  width: 23px;
+  height: auto;
+}
+
+.aksi2 {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #42454A;
+  border: 1px solid #55565B;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.aksi2:hover {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #595C60;
+  border: 1px solid #8A8C8F;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.plusButton {
+  width: 23px;
+  height: auto;
+}
+
+.aksi3 {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #42454A;
+  border: 1px solid #55565B;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.aksi3:hover {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #595C60;
+  border: 1px solid #8A8C8F;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.likeButton {
+  width: 23px;
+  height: auto;
+}
+
+.kanan {
+  margin-left: 485px;
+  margin-top: 70px;
+}
+
+.suara {
+  width: 40px;
+  margin-left: 242px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.pauseVideo {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+}
+
+.controlVideo {
+  display: flex;
+  align-items: center;
+}
+
+.durasiVideo {
+  display: flex;
+  margin-left: 12px;
+}
+
+.durasiTotal {
+  width: 200px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.durasiActive {
+  height: 4px;
+  background-color: #4964EF;
+  border-radius: 50px;
+  z-index: 100;
+  position: absolute;
+  transition: width 0.1s linear;
+  cursor: pointer;
+}
+
+.durasiActive::after {
+  content: '';
+  position: absolute;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 4px;
+  background-color: #4964EF;
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.keteranganAngka {
+  font-size: 13px;
+  color: white;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.content2 {
+  display: flex;
+  margin-top: 60px;
+}
+
+.kiri2 {
+  margin-left: 35px;
+}
+
+.informasi1 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tanggalRilis {
+  font-size: 15px;
+  font-weight: 500;
+  color: #BDBDBE;
+}
+
+.hdJudul {
+  width: 30px;
+  height: auto;
+}
+
+.audioJudul {
+  width: 75px;
+  height: auto;
+}
+
+.informasi2 {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 8px;
+}
+
+.judul18 {
+  width: 30px;
+}
+
+.kekerasan {
+  color: white;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.deskripsiFilm {
+  margin-top: 30px;
+  color: white;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1.9;
+}
+
+.kanan2 {
+  margin-left: 320px;
+  margin-top: -5px;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+}
+
+.sectionTrailer {
+  margin-bottom: 10px;
+}
+
+.label {
+  color: #7D7C7E;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.value {
+  margin-left: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.value em {
+  font-style: italic;
+  color: white;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.content3 {
+  margin-top: 30px;
+  margin-left: 35px;
+}
+
+.judulKoleksi {
+  display: flex;
+  align-items: center;
+}
+
+.koleksiIcon {
+  width: 26px;
+  height: auto;
+}
+
+.textKoleksi {
+  color: white;
+  font-size: 22px;
+  font-weight: 550;
+  margin-left: 10px;
+}
+
+.card-container {
+  margin-top: 18px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-container1 {
+  margin-top: 18px;
+  margin-left: 35px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-container2 {
+  margin-top: 18px;
+  margin-left: 35px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-container3 {
+  margin-top: 18px;
+  margin-left: 35px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-container4 {
+  margin-top: 18px;
+  margin-left: 35px;
+  display: flex;
+  gap: 20px;
+}
+
+.card-container5 {
+  margin-top: 18px;
+  margin-left: 35px;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #3B393D;
+  width: 250px;
+  height: 358px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #464548;
+  width: 250px;
+  height: 358px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.playFilm {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  z-index: 100;
+  margin-left: 98px;
+  margin-top: 42px;
+}
+
+.card .playFilm {
+  visibility: hidden; /* Sembunyikan elemen */
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s ease; /* Transisi opacity, delay untuk visibility */
+}
+
+.card:hover .playFilm {
+  visibility: visible; /* Tampilkan elemen */
+  opacity: 1;
+  transition-delay: 0s; /* Hapus delay saat elemen di-hover */
+}
+
+.spesifikasi {
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  gap: 7px;
+  margin-left: 15px;
+}
+
+.koleksi18 {
+  width: 30px;
+  height: auto;
+}
+
+.hdKoleksi {
+  width: 30px;
+  height: auto;
+}
+
+.audioKoleksi {
+  width: 75px;
+}
+
+.tahun {
+  margin-left: 15px;
+  color: white;
+  font-size: 14px;
+  margin-top: 12px;
+  font-weight: 450;
+}
+
+.deskripsiKoleksi {
+  color: #BDBDBE;
+  font-size: 13px;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-weight: 450;
+}
+
+.content4 {
+  margin-top: 50px;
+}
+
+.textLainnya {
+  color: white;
+  font-size: 22px;
+  font-weight: 550;
+  margin-left: 35px;
+}
+
+.pembatasLainnya {
+  width: 1130px;
+  height: 100px;
+  background: linear-gradient(rgba(38, 36, 40, 0.0), rgba(38, 36, 40, 1.0));
+  margin-top: -100px;
+  z-index: 100;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  
+}
+
+.garisPembatas {
+  width: 1060px;
+  height: 1.5px;
+  background-color: #686769;
+  z-index: 100;
+  position: absolute;
+  margin-top: 90px;
+}
+
+.arrowDown {
+  width: 40px;
+  height: auto;
+  z-index: 100;
+  position: absolute;
+  margin-top: 72px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content5 {
+  margin-top: 50px;
+  margin-left: 35px;
+
+}
+
+.textTentang {
+  color: white;
+  font-size: 22px;
+  font-weight: 550;
+}
+
+.kiri3 {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-top: 20px;
+}
+
+.sectionTentang {
+  margin-bottom: -2px;
+  display: flex;
+}
+
+.sectionRating {
+  display: flex;
+  gap: 10px;
+}
+
+.title {
+  color: #7D7C7E;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.isi {
+  margin-left: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.tentang18 {
+  width: 35px;
+  height: auto;
+  margin-top: -16px;
+}
+
+.popup-tambah-daftar {
+  position: absolute;
+  display: flex;
+  top: 50px; /* Sesuaikan sesuai kebutuhan */
+  left: 160px;
+}
+
+.tambahDaftar {
+  width: auto;
+  height: 53px;
+}
+
+.popup-liked {
+  position: absolute;
+  display: flex;
+  top: 50px; /* Sesuaikan sesuai kebutuhan */
+  left: 245px;
+}
+
+.sayaSuka {
+  width: auto;
+  height: 53px;
+}

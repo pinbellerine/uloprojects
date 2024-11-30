@@ -1,0 +1,171 @@
+.container-baru{
+    overflow-x: hidden;
+    background-color: #151318;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.movie-row {
+    display: flex;
+    gap: 12px;
+    padding: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.nomorFilm {
+    width: 130px;
+    height: auto;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+}
+
+.movie-card-p {
+    flex: 0 0 300px;
+    position: relative;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    height: 170px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.movie-card-p img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    bottom: 0.1rem;
+    left: 1.5rem;
+    background: #4169E1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.numbered-section {
+    position: relative;
+}
+
+.kartu {
+    height: 200px;
+    width: auto;
+}
+
+.movie-card-number1 {
+    border-radius: 8px;
+    height: 200px;
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-left: -42px;
+}
+
+.movie-card-number2 {
+    border-radius: 8px;
+    height: 200px;
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+}
+
+.movie-card-number3 {
+    border-radius: 8px;
+    height: 200px;
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15px;
+}
+
+.movie-card-number4 {
+    border-radius: 8px;
+    height: 200px;
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-left: -22px;
+}
+
+.movie-card-number5 {
+    border-radius: 8px;
+    height: 200px;
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+}
+
+.movie-card-number6 {
+    border-radius: 8px;
+    height: 200px;
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+}
+
+.movie-card-number1:hover {
+    transform: scale(1.05);
+}
+.movie-card-number2:hover {
+    transform: scale(1.05);
+}
+.movie-card-number3:hover {
+    transform: scale(1.05);
+}
+.movie-card-number4:hover {
+    transform: scale(1.05);
+}
+.movie-card-number5:hover {
+    transform: scale(1.05);
+}
+
+.number {
+    font-size: 8rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.scroll-button {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin: 0 1rem;
+    transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+    background-color: black;
+}
+
+.movie-controls {
+    display: flex;
+    align-items: center;
+}
+

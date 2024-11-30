@@ -1,0 +1,110 @@
+/* ... (keep your existing styles) */
+
+.subtitleSelectorFawwaz {
+  position: relative;
+}
+
+.subtitleButtonFawwaz {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.subtitleButtonFawwaz:hover {
+  opacity: 0.8;
+}
+
+.subtitlePopupFawwaz {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.subtitleOptionFawwaz {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-size: 14px;
+}
+
+.subtitleOptionFawwaz:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.subtitleOptionFawwaz.active {
+  color: #3498db; /* Change this to match the exact blue color in the image */
+}
+/* ... (keep your existing styles) */
+
+.subtitleSelectorFawwaz {
+    position: relative;
+  }
+  
+  .subtitleButtonFawwaz {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+  }
+  
+  .subtitleButtonFawwaz:hover {
+    opacity: 0.8;
+  }
+  
+  .subtitlePopupFawwaz {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 160px;
+    z-index: 10;
+  }
+  
+  .subtitleOptionFawwaz {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    text-align: center;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-size: 14px;
+  }
+  
+  .subtitleOptionFawwaz:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .subtitleOptionFawwaz.active {
+    color: #3498db; /* Change this to match the exact blue color in the image */
+  }

@@ -1,0 +1,40 @@
+.daftar-saya-container {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    
+}
+
+.daftar-saya-header {
+    font-size: 32px;
+    padding: 150px 20px;
+}
+
+.daftar-saya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(338px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.daftar-saya-card {
+    width: 338px;
+    height: 191px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.daftar-saya-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.daftar-saya-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}

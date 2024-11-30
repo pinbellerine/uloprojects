@@ -1,0 +1,73 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));
+    /* Default background */
+}
+
+.navbar.scrolled {
+    background: black;
+    /* Background saat di-scroll */
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 2rem;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    color: #fff;
+    /* Warna khusus untuk link aktif */
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.profileButton {
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}

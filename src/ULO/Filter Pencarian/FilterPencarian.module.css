@@ -1,0 +1,167 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    color: white;
+    position: fixed;
+    /* Fix position */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* High z-index to stay on top */
+    text-align: left;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+    padding: 2rem;
+    /* Add padding to prevent overlap with fixed navbar */
+}
+
+
+.filterSection {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+}
+
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selectGroup {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filterLabel {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.select {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.375rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2.5 4L6 7.5L9.5 4' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    min-width: 120px;
+}
+
+.select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.select option {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 0.5rem;
+}
+
+.movieGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.movieCard {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imageWrapper {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.movieImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movieCard:hover .overlay {
+    opacity: 1;
+}
+
+.movieCard:hover .movieImage {
+    transform: scale(1.05);
+}
+
+.movieTitle {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .filterSection {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .selectGroup {
+        flex-wrap: wrap;
+    }
+
+    .select {
+        width: 100%;
+        min-width: 150px;
+    }
+
+    .movieGrid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .movieGrid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,439 @@
+.videoContainerFawwaz {
+
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+
+}
+
+.videoFawwaz {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+.backButtonFawwaz {
+position: absolute;
+top: 20px;
+left: 20px;
+width: 40px;
+height: 40px;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+color: white;
+z-index: 10;
+}
+
+.controlsFawwaz {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+padding: 8px 16px 16px;
+}
+
+.progressBarWrapperFawwaz {
+display: flex;
+align-items: center;
+width: 100%;
+padding: 10px 0;
+}
+
+.progressBarFawwaz {
+flex-grow: 1;
+height: 4px;
+-webkit-appearance: none;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 2px;
+cursor: pointer;
+transition: height 0.2s ease;
+position: relative;
+margin: 0;
+padding: 0;
+background: linear-gradient(to right, white var(--progress-position, 0%), rgba(255, 255, 255, 0.2) var(--progress-position, 0%));
+}
+/* Webkit (Chrome, Safari, newer versions of Opera) */
+.progressBarFawwaz::-webkit-slider-thumb {
+-webkit-appearance: none;
+width: 12px;
+height: 12px;
+background: white;
+border-radius: 50%;
+cursor: pointer;
+margin-top: -4px;
+position: relative;
+z-index: 2;
+}
+
+.progressBarFawwaz::-webkit-slider-runnable-track {
+width: 100%;
+height: 4px;
+background: transparent;
+border-radius: 2px;
+position: relative;
+}
+
+/* Firefox */
+
+.progressBarFawwaz::-moz-range-thumb {
+width: 12px;
+height: 12px;
+background: white;
+border: none;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.progressBarFawwaz::-moz-range-track {
+width: 100%;
+height: 4px;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 2px;
+}
+
+.progressBarFawwaz::-moz-range-progress {
+background: white;
+border-radius: 2px;
+height: 4px;
+}
+.progressBarFawwaz::before {
+content: '';
+position: absolute;
+height: 100%;
+background: white;
+width: var(--progress-position, 0%);
+border-radius: 2px;
+pointer-events: none;
+}
+/* Hover effects */
+.progressBarFawwaz:hover {
+height: 6px;
+}
+
+.progressBarFawwaz:hover::-webkit-slider-thumb {
+width: 14px;
+height: 14px;
+margin-top: -5px;
+}
+
+.progressBarFawwaz:hover::-moz-range-thumb {
+width: 14px;
+height: 14px;
+margin-top: -5px;
+}
+
+/* Active states */
+.progressBarFawwaz:active::-webkit-slider-thumb {
+transform: scale(1.2);
+}
+
+.progressBarFawwaz:active::-moz-range-thumb {
+transform: scale(1.2);
+}
+.timeDisplayFawwaz {
+
+font-size: 14px;
+margin-left: 12px;
+color: white;
+}
+
+.buttonsContainerFawwaz {
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+}
+
+.leftControlsFawwaz, .rightControlsFawwaz {
+display: flex;
+align-items: center;
+gap: 16px;
+}
+
+.controlButtonFawwaz {
+background: transparent;
+border: none;
+color: white;
+cursor: pointer;
+width: 32px;
+height: 32px;
+padding: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: opacity 0.2s ease;
+}
+
+.controlButtonFawwaz:hover {
+opacity: 0.8;
+}
+
+.controlButtonFawwaz.active {
+color: #3498db;
+}
+
+/* Hover states */
+.videoContainerFawwaz:hover .controlsFawwaz {
+opacity: 1;
+}
+
+.controlsFawwaz {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+/* Fullscreen styles */
+.videoContainerFawwaz:fullscreen {
+width: 100vw;
+height: 100vh;
+}
+
+.videoContainerFawwaz:fullscreen .videoFawwaz {
+height: 100vh;
+}
+.popupContainerFawwaz {
+position: absolute;
+bottom: 60px; /* Adjust as necessary */
+right: 20px;  /* Adjust as necessary to align with the button */
+z-index: 100;
+}
+.videoContainerFawwaz {
+position: relative;
+width: 100%;
+background-color: #000;
+aspect-ratio: 16 / 9;
+}
+
+/* ... existing styles ... */
+
+.reportButtonFawwaz {
+position: absolute;
+top: 20px;
+right: 20px;
+width: 40px;
+height: 40px;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 10;
+transition: opacity 0.2s ease;
+}
+
+.reportButtonFawwaz:hover {
+opacity: 0.8;
+}
+
+.volumeControlFawwaz {
+position: relative;
+}
+
+.volumeSliderFawwaz {
+position: absolute;
+bottom: -10%;
+left: 300%;
+transform: translateX(-50%);
+
+padding: 10px;
+border-radius: 5px;
+}
+
+.volumeRangeFawwaz {
+-webkit-appearance: none;
+width: 100px;
+height: 5px;
+background: #ddd;
+outline: none;
+transform: rotate(0deg);
+transform-origin: right center;
+}
+
+.volumeRangeFawwaz::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 15px;
+height: 15px;
+background: #fff;
+cursor: pointer;
+border-radius: 50%;
+}
+
+.volumeRangeFawwaz::-moz-range-thumb {
+width: 15px;
+height: 15px;
+background: #fff;
+cursor: pointer;
+border-radius: 50%;
+}
+
+/* ... (keep your existing styles) */
+
+.subtitleSelectorFawwaz {
+position: relative;
+}
+
+.subtitleButtonFawwaz {
+background: transparent;
+border: none;
+color: white;
+cursor: pointer;
+width: 32px;
+height: 32px;
+padding: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: opacity 0.2s ease;
+}
+
+.subtitleButtonFawwaz:hover {
+opacity: 0.8;
+}
+
+.subtitlePopupFawwaz {
+position: absolute;
+bottom: 100%;
+right: 0;
+background-color: rgba(0, 0, 0, 0.8);
+border-radius: 12px;
+padding: 8px;
+min-width: 160px;
+z-index: 10;
+}
+
+.subtitleOptionFawwaz {
+display: block;
+width: 100%;
+padding: 8px 16px;
+text-align: center;
+background: none;
+border: none;
+color: white;
+cursor: pointer;
+transition: color 0.2s ease;
+font-size: 14px;
+}
+
+.subtitleOptionFawwaz:hover {
+background-color: rgba(255, 255, 255, 0.1);
+}
+
+.subtitleOptionFawwaz.active {
+color: #3498db; /* Change this to match the exact blue color in the image */
+}
+.playbackSpeedPopupFawwaz {
+position: absolute;
+bottom: 60px;
+right: 50px;
+background: #1A1A1A;
+border-radius: 12px;
+padding: 16px 20px;
+min-width: 280px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+}
+
+.playbackSpeedTitleFawwaz {
+color: rgb(255, 255, 255);
+font-size: 14px;
+margin-bottom: 20px;
+font-weight: 500;
+}
+
+.speedOptionsFawwaz {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+/* The connecting line */
+.speedOptionsFawwaz::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 4px;  /* Adjust to align with first dot */
+right: 4px; /* Adjust to align with last dot */
+height: 2px;
+background-color: rgba(255, 255, 255, 1); /* Pure white line */
+transform: translateY(-50%);
+z-index: 1;
+}
+
+.speedOptionFawwaz {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+cursor: pointer;
+z-index: 2;
+}
+
+.speedOptionFawwaz span {
+color: #ffffff;
+margin-top: 8px;
+font-size: 14px;
+}
+
+.speedDotFawwaz {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #ffffff; /* White dots by default */
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.activeSpeedFawwaz .speedDotFawwaz {
+opacity: 0.3; /* Fade in when active */
+transform: scale(1.2); /* Slightly larger when active */
+width: 8px;
+height: 8px;
+
+}
+
+/* Add slider animation */
+@keyframes slideToActive {
+from { transform: translateX(0); }
+to { transform: translateX(var(--slide-distance)); }
+}
+/* Hover effects */
+.progressBarFawwaz:hover {
+height: 6px;
+}
+.progressBarFawwaz:hover::-webkit-slider-thumb {
+transform: scale(1.2);
+}
+
+.progressBarFawwaz:hover::-moz-range-thumb {
+transform: scale(1.2);
+}
+
+/* Active states */
+.progressBarFawwaz:active::-webkit-slider-thumb {
+transform: scale(1.4);
+}
+
+.progressBarFawwaz:active::-moz-range-thumb {
+transform: scale(1.4);
+}
+
+/* Hide controls when in fullscreen */
+.hiddenFawwaz {
+opacity: 0 !important;
+pointer-events: none !important;
+}
+
+/* Controls fade animation */
+.controlsFawwaz {
+opacity: 1;
+transition: opacity 0.3s ease;
+}
